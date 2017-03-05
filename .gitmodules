@@ -1,0 +1,12 @@
+[submodule "libcorrect"]
+	path = libcorrect
+	url = https://github.com/quiet/libcorrect
+[submodule "liquid-dsp"]
+	path = liquid-dsp
+	url = https://github.com/quiet/liquid-dsp
+[submodule "jansson"]
+	path = jansson
+	url = https://github.com/akheron/jansson
+[submodule "quiet"]
+	path = quiet
+	url = https://github.com/quiet/quiet
