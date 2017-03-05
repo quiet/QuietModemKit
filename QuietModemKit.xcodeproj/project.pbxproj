@@ -412,8 +412,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				"HEADER_SEARCH_PATHS[sdk=iphoneos*]" = "$SRCROOT/lib/Release-iphoneos";
-				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*]" = "$SRCROOT/lib/Release-iphonesimulator";
+				"HEADER_SEARCH_PATHS[sdk=iphoneos*]" = "$SRCROOT/include/Release-iphoneos";
+				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*]" = "$SRCROOT/include/Release-iphonesimulator";
 				INFOPLIST_FILE = QuietModemKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
