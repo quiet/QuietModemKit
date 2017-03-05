@@ -390,7 +390,8 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				"LIBRARY_SEARCH_PATHS[arch=*]" = "\"${DERIVED_FILE_DIR}/lib\"";
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "$SRCROOT/lib/Debug-iphoneos";
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "$SRCROOT/lib/Debug-iphonesimulator";
 				OTHER_LDFLAGS = (
 					"-lquiet",
 					"-ljansson",
@@ -417,7 +418,8 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				"LIBRARY_SEARCH_PATHS[arch=*]" = "\"${DERIVED_FILE_DIR}/lib\"";
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "$SRCROOT/lib/Release-iphoneos";
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "$SRCROOT/lib/Release-iphonesimulator";
 				OTHER_LDFLAGS = (
 					"-lquiet",
 					"-ljansson",
