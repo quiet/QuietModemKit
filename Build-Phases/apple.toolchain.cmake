@@ -130,17 +130,17 @@ set(APPLE_VERSION_FLAG "-$ENV{DEPLOYMENT_TARGET_CLANG_FLAG_NAME}=${APPLE_PLATFOR
 set (PLATFORM_VERSION ${APPLE_PLATFORM_VERSION_MIN} CACHE STRING "Minimum version of the target platform")
 
 # Define XCode ENABLE_BITCODE option
-if ($ENV{ENABLE_BITCODE})
-    if (SIMULATOR)
+if ($ENV{ENABLE_BITCODE} STREQUAL "YES")
+    if ($ENV{BITCODE_GENERATION_MODE} STREQUAL "marker")
         set (BITCODE_FLAG "-fembed-bitcode-marker")
-    else (SIMULATOR)
+    elseif ($ENV{BITCODE_GENERATION_MODE} STREQUAL "bitcode")
         set (BITCODE_FLAG "-fembed-bitcode")
-    endif (SIMULATOR)
+    endif ()
     message (STATUS "Bitcode: ENABLED")
-else ($ENV{ENABLE_BITCODE})
+else ()
     set (BITCODE_FLAG "")
     message (STATUS "Bitcode: DISABLED")
-endif ($ENV{ENABLE_BITCODE})
+endif ()
 
 # Set the find root to the Apple *OS developer roots and to user defined paths
 set (CMAKE_FIND_ROOT_PATH
@@ -201,7 +201,7 @@ set(CMAKE_C_LINK_EXECUTABLE
 "/usr/bin/clang <FLAGS> <CMAKE_C_LINK_FLAGS> <LINK_FLAGS> <OBJECTS>  -o <TARGET> <LINK_LIBRARIES>")
 
 set (CMAKE_PLATFORM_HAS_INSTALLNAME 1)
-if (ENABLE_BITCODE)
+if ($ENV{ENABLE_BITCODE} STREQUAL "YES")
 else()
     set (CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -dynamiclib -headerpad_max_install_names")
     set (CMAKE_SHARED_MODULE_CREATE_C_FLAGS "-bundle -headerpad_max_install_names")
