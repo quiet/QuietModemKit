@@ -5,9 +5,10 @@ ABSPATH=$SRCROOT
 SRCPATH=$SRCROOT
 SYSROOTPATH="$BUILT_PRODUCTS_DIR/sysroot"
 TOPBUILDPATH="$BUILT_PRODUCTS_DIR"
-LIBPATH="$ABSPATH/ios/lib"
-INCLUDEPATH="$ABSPATH/ios/include"
-LICENSEPATH="$ABSPATH/ios/licenses"
+BUILDTYPE="${CONFIGURATION}-${PLATFORM_NAME}"
+LIBPATH="$ABSPATH/lib/${BUILDTYPE}/"
+INCLUDEPATH="$ABSPATH/include/${BUILDTYPE}/"
+LICENSEPATH="$ABSPATH/licenses"
 
 if [ ! -d "$SYSROOTPATH/usr" ]; then
     mkdir -p "$SYSROOTPATH/usr"
@@ -35,20 +36,21 @@ mkdir -p "$BUILDPATH/quiet"
 cd "$BUILDPATH/quiet"
 cmake -DCMAKE_TOOLCHAIN_FILE="$SRCPATH/Build-Phases/apple.toolchain.cmake" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="$SYSROOT/usr" -DCMAKE_PREFIX_PATH="$SYSROOT" "$SRCPATH/quiet" && make && make install
 
-exit 0
-
-mkdir -p "$LIBPATH/$1"
-mkdir -p "$INCLUDEPATH/$1"
+mkdir -p "$LIBPATH"
+mkdir -p "$INCLUDEPATH"
 # lipo -create -output "$LIBPATH/$1/libfec.a" "$SYSROOTPATH/$1/usr/lib/libfec.a" "$SYSROOTPATH/$1-sim/usr/lib/libfec.a"
 # lipo -create -output "$LIBPATH/$1/libliquid.a" "$SYSROOTPATH/$1/usr/lib/libliquid.a" "$SYSROOTPATH/$1-sim/usr/lib/libliquid.a"
 # lipo -create -output "$LIBPATH/$1/libjansson.a" "$SYSROOTPATH/$1/usr/lib/libjansson.a" "$SYSROOTPATH/$1-sim/usr/lib/libjansson.a"
 # lipo -create -output "$LIBPATH/$1/libquiet.a" "$SYSROOTPATH/$1/usr/lib/libquiet.a" "$SYSROOTPATH/$1-sim/usr/lib/libquiet.a"
-cp "$SYSROOTPATH/$1/usr/include/fec.h" "$INCLUDEPATH/$1"
-cp -R "$SYSROOTPATH/$1/usr/include/liquid" "$INCLUDEPATH/$1"
-cp "$SYSROOTPATH/$1/usr/include/jansson.h" "$INCLUDEPATH/$1"
-cp "$SYSROOTPATH/$1/usr/include/jansson_config.h" "$INCLUDEPATH/$1"
-cp "$SYSROOTPATH/$1/usr/include/quiet.h" "$INCLUDEPATH/$1"
-
+cp "$SYSROOTPATH/usr/lib/libfec.a" "$LIBPATH"
+cp "$SYSROOTPATH/usr/lib/libliquid.a" "$LIBPATH"
+cp "$SYSROOTPATH/usr/lib/libjansson.a" "$LIBPATH"
+cp "$SYSROOTPATH/usr/lib/libquiet.a" "$LIBPATH"
+cp "$SYSROOTPATH/usr/include/fec.h" "$INCLUDEPATH"
+cp -R "$SYSROOTPATH/usr/include/liquid" "$INCLUDEPATH"
+cp "$SYSROOTPATH/usr/include/jansson.h" "$INCLUDEPATH"
+cp "$SYSROOTPATH/usr/include/jansson_config.h" "$INCLUDEPATH"
+cp "$SYSROOTPATH/usr/include/quiet.h" "$INCLUDEPATH"
 
 
 mkdir -p "$LICENSEPATH"

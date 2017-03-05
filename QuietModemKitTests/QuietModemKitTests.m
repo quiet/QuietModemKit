@@ -1,11 +1,3 @@
-//
-//  QuietModemKitTests.m
-//  QuietModemKitTests
-//
-//  Created by Brian Armstrong on 2/20/17.
-//  Copyright © 2017 Quiet Modem Project. All rights reserved.
-//
-
 #import <XCTest/XCTest.h>
 
 @interface QuietModemKitTests : XCTestCase

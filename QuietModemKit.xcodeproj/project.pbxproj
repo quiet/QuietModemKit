@@ -10,6 +10,9 @@
 		D34332391E5B961B0057EB54 /* QuietModemKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D343322F1E5B961B0057EB54 /* QuietModemKit.framework */; };
 		D343323E1E5B961B0057EB54 /* QuietModemKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D343323D1E5B961B0057EB54 /* QuietModemKitTests.m */; };
 		D34332401E5B961B0057EB54 /* QuietModemKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D34332321E5B961B0057EB54 /* QuietModemKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D39F69F21E6CA6D6004089BA /* QMTransmitterConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D39F69F11E6CA6D6004089BA /* QMTransmitterConfig.m */; };
+		D39F69FF1E6CB55B004089BA /* apple.toolchain.cmake in Resources */ = {isa = PBXBuildFile; fileRef = D39F69FB1E6CB55B004089BA /* apple.toolchain.cmake */; };
+		D39F6A001E6CB55B004089BA /* build-c-libraries.sh in Resources */ = {isa = PBXBuildFile; fileRef = D39F69FC1E6CB55B004089BA /* build-c-libraries.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,13 @@
 		D34332381E5B961B0057EB54 /* QuietModemKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuietModemKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D343323D1E5B961B0057EB54 /* QuietModemKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuietModemKitTests.m; sourceTree = "<group>"; };
 		D343323F1E5B961B0057EB54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D39F69ED1E6CA472004089BA /* QMTransmitterConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QMTransmitterConfig.h; sourceTree = "<group>"; };
+		D39F69EE1E6CA4B8004089BA /* QMFrameTransmitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QMFrameTransmitter.h; sourceTree = "<group>"; };
+		D39F69EF1E6CA4C6004089BA /* QMReceiverConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QMReceiverConfig.h; sourceTree = "<group>"; };
+		D39F69F01E6CA4D0004089BA /* QMFrameReceiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QMFrameReceiver.h; sourceTree = "<group>"; };
+		D39F69F11E6CA6D6004089BA /* QMTransmitterConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMTransmitterConfig.m; sourceTree = "<group>"; };
+		D39F69FB1E6CB55B004089BA /* apple.toolchain.cmake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = apple.toolchain.cmake; sourceTree = "<group>"; };
+		D39F69FC1E6CB55B004089BA /* build-c-libraries.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "build-c-libraries.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,8 @@
 		D34332251E5B961B0057EB54 = {
 			isa = PBXGroup;
 			children = (
+				D39F69F81E6CB55B004089BA /* Build-Phases */,
+				D39F69F71E6CB545004089BA /* lib */,
 				D34332311E5B961B0057EB54 /* QuietModemKit */,
 				D343323C1E5B961B0057EB54 /* QuietModemKitTests */,
 				D34332301E5B961B0057EB54 /* Products */,
@@ -74,6 +86,11 @@
 			children = (
 				D34332321E5B961B0057EB54 /* QuietModemKit.h */,
 				D34332331E5B961B0057EB54 /* Info.plist */,
+				D39F69ED1E6CA472004089BA /* QMTransmitterConfig.h */,
+				D39F69EE1E6CA4B8004089BA /* QMFrameTransmitter.h */,
+				D39F69EF1E6CA4C6004089BA /* QMReceiverConfig.h */,
+				D39F69F01E6CA4D0004089BA /* QMFrameReceiver.h */,
+				D39F69F11E6CA6D6004089BA /* QMTransmitterConfig.m */,
 			);
 			path = QuietModemKit;
 			sourceTree = "<group>";
@@ -94,6 +111,22 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		D39F69F71E6CB545004089BA /* lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		D39F69F81E6CB55B004089BA /* Build-Phases */ = {
+			isa = PBXGroup;
+			children = (
+				D39F69FB1E6CB55B004089BA /* apple.toolchain.cmake */,
+				D39F69FC1E6CB55B004089BA /* build-c-libraries.sh */,
+			);
+			path = "Build-Phases";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -112,11 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D34332431E5B961B0057EB54 /* Build configuration list for PBXNativeTarget "QuietModemKit" */;
 			buildPhases = (
+				D343324D1E5BBF0C0057EB54 /* ShellScript */,
 				D343322A1E5B961B0057EB54 /* Sources */,
 				D343322B1E5B961B0057EB54 /* Frameworks */,
 				D343322C1E5B961B0057EB54 /* Headers */,
 				D343322D1E5B961B0057EB54 /* Resources */,
-				D343324D1E5BBF0C0057EB54 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -187,6 +220,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39F69FF1E6CB55B004089BA /* apple.toolchain.cmake in Resources */,
+				D39F6A001E6CB55B004089BA /* build-c-libraries.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +244,7 @@
 			);
 			outputPaths = (
 				"",
+				"$(DERIVED_FILE_DIR)/srcroot/usr/include/quiet.h",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -221,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39F69F21E6CA6D6004089BA /* QMTransmitterConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,10 +384,20 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				"HEADER_SEARCH_PATHS[sdk=iphoneos*]" = "$SRCROOT/include/Debug-iphoneos";
+				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*]" = "$SRCROOT/include/Debug-iphonesimulator";
 				INFOPLIST_FILE = QuietModemKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "$SRCROOT/lib/Debug-iphoneos";
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "$SRCROOT/lib/Debug-iphonesimulator";
+				OTHER_LDFLAGS = (
+					"-lquiet",
+					"-ljansson",
+					"-lliquid",
+					"-lfec",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Quiet.QuietModemKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -365,10 +412,20 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				"HEADER_SEARCH_PATHS[sdk=iphoneos*]" = "$SRCROOT/lib/Release-iphoneos";
+				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*]" = "$SRCROOT/lib/Release-iphonesimulator";
 				INFOPLIST_FILE = QuietModemKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "$SRCROOT/lib/Release-iphoneos";
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "$SRCROOT/lib/Release-iphonesimulator";
+				OTHER_LDFLAGS = (
+					"-lquiet",
+					"-ljansson",
+					"-lliquid",
+					"-lfec",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Quiet.QuietModemKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
