@@ -1,4 +1,5 @@
 #import "QMFrameReceiver.h"
+#import "QuietModemKitPrivate.h"
 
 @implementation QMFrameReceiver {
     AudioQueueRef queue;

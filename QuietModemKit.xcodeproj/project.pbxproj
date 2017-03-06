@@ -49,6 +49,7 @@
 		D39F6A0E1E6CC7B2004089BA /* QMFrameTransmitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMFrameTransmitter.m; sourceTree = "<group>"; };
 		D39F6A101E6CC81A004089BA /* QMReceiverConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMReceiverConfig.m; sourceTree = "<group>"; };
 		D39F6A121E6CC826004089BA /* QMFrameReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMFrameReceiver.m; sourceTree = "<group>"; };
+		D39F6A1D1E6CFD88004089BA /* QuietModemKitPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuietModemKitPrivate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +97,7 @@
 			children = (
 				D34332321E5B961B0057EB54 /* QuietModemKit.h */,
 				D34332331E5B961B0057EB54 /* Info.plist */,
+				D39F6A1D1E6CFD88004089BA /* QuietModemKitPrivate.h */,
 				D39F69ED1E6CA472004089BA /* QMTransmitterConfig.h */,
 				D39F69F11E6CA6D6004089BA /* QMTransmitterConfig.m */,
 				D39F69EE1E6CA4B8004089BA /* QMFrameTransmitter.h */,
@@ -258,10 +260,15 @@
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/libcorrect/",
+				"$(SRCROOT)/jansson/",
+				"$(SRCROOT)/liquid/",
+				"$(SRCROOT)/quiet/",
+				"$(SRCROOT)/Build-Phases/",
 			);
 			outputPaths = (
-				"",
-				"$(DERIVED_FILE_DIR)/srcroot/usr/include/quiet.h",
+				"$(SRCROOT)/include/",
+				"$(SRCROOT)/lib/",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

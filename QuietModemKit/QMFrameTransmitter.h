@@ -5,7 +5,6 @@
 #include <AudioToolbox/AudioQueue.h>
 #include <CoreAudio/CoreAudioTypes.h>
 
-#include "quiet.h"
 #include "QMTransmitterConfig.h"
 
 @interface QMFrameTransmitter : NSObject

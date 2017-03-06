@@ -7,7 +7,6 @@
 #include <AVFoundation/AVFoundation.h>
 
 #include "QMReceiverConfig.h"
-#include "quiet.h"
 
 typedef void (^QMFrameReceiverCallback)(NSData *frame);
 

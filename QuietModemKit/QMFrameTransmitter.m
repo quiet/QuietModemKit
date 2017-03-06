@@ -1,4 +1,5 @@
 #import "QMFrameTransmitter.h"
+#import "QuietModemKitPrivate.h"
 
 @implementation QMFrameTransmitter {
     AudioQueueRef output_queue;

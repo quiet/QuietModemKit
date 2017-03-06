@@ -1,4 +1,6 @@
 #import "QMTransmitterConfig.h"
+#import "QuietModemKitPrivate.h"
+
 
 static const unsigned int default_num_buffers = 3;
 static const unsigned int default_buffer_length = 4096;

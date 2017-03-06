@@ -53,6 +53,9 @@ cp "$SYSROOTPATH/usr/include/jansson_config.h" "$INCLUDEPATH"
 cp "$SYSROOTPATH/usr/include/quiet.h" "$INCLUDEPATH"
 
 
+#cp "$SYSROOTPATH/usr/include/quiet.h" "$PUBLIC_HEADERS_FOLDER_PATH"
+
+
 mkdir -p "$LICENSEPATH"
 cp "$SRCPATH/libcorrect/LICENSE" "$LICENSEPATH/libcorrect"
 cp "$SRCPATH/liquid-dsp/LICENSE" "$LICENSEPATH/liquid-dsp"
