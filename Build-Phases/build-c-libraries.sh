@@ -29,8 +29,8 @@ cmake -DCMAKE_TOOLCHAIN_FILE="$SRCPATH/Build-Phases/apple.toolchain.cmake" -DCMA
 
 mkdir -p "$BUILDPATH/jansson"
 cd "$BUILDPATH/jansson"
-cmake -DCMAKE_TOOLCHAIN_FILE="$SRCPATH/Build-Phases/apple.toolchain.cmake" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="$SYSROOT/usr" -DJANSSON_BUILD_SHARED_LIBS=on "$SRCPATH/jansson" && make && make install
-cmake -DCMAKE_TOOLCHAIN_FILE="$SRCPATH/Build-Phases/apple.toolchain.cmake" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="$SYSROOT/usr" -DJANSSON_BUILD_SHARED_LIBS=off "$SRCPATH/jansson" && make && make install
+cmake -DCMAKE_TOOLCHAIN_FILE="$SRCPATH/Build-Phases/apple.toolchain.cmake" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="$SYSROOT/usr" -DJANSSON_BUILD_SHARED_LIBS=on -DJANSSON_WITHOUT_TESTS=on -DJANSSON_EXAMPLES=off -DJANSSON_BUILD_DOCS=off "$SRCPATH/jansson" && make && make install
+cmake -DCMAKE_TOOLCHAIN_FILE="$SRCPATH/Build-Phases/apple.toolchain.cmake" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="$SYSROOT/usr" -DJANSSON_BUILD_SHARED_LIBS=off -DJANSSON_WITHOUT_TESTS=on -DJANSSON_EXAMPLES=off -DJANSSON_BUILD_DOCS=off "$SRCPATH/jansson" && make && make install
 
 mkdir -p "$BUILDPATH/quiet"
 cd "$BUILDPATH/quiet"

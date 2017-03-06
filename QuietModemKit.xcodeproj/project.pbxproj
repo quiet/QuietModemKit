@@ -266,7 +266,7 @@
 			inputPaths = (
 				"$(SRCROOT)/libcorrect/",
 				"$(SRCROOT)/jansson/",
-				"$(SRCROOT)/liquid/",
+				"$(SRCROOT)/liquid-dsp/",
 				"$(SRCROOT)/quiet/",
 				"$(SRCROOT)/Build-Phases/",
 			);
