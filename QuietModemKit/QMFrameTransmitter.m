@@ -87,6 +87,10 @@ void output_callback(void *user_data, AudioQueueRef queue, AudioQueueBufferRef b
 }
 
 - (void)dealloc {
+    AudioQueueStop(output_queue, true);
+    if (monoBuffer) {
+        free(monoBuffer);
+    }
     quiet_encoder_destroy(encoder);
 }
 
