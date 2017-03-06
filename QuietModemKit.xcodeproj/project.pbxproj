@@ -13,6 +13,13 @@
 		D39F69F21E6CA6D6004089BA /* QMTransmitterConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D39F69F11E6CA6D6004089BA /* QMTransmitterConfig.m */; };
 		D39F69FF1E6CB55B004089BA /* apple.toolchain.cmake in Resources */ = {isa = PBXBuildFile; fileRef = D39F69FB1E6CB55B004089BA /* apple.toolchain.cmake */; };
 		D39F6A001E6CB55B004089BA /* build-c-libraries.sh in Resources */ = {isa = PBXBuildFile; fileRef = D39F69FC1E6CB55B004089BA /* build-c-libraries.sh */; };
+		D39F6A0F1E6CC7B2004089BA /* QMFrameTransmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = D39F6A0E1E6CC7B2004089BA /* QMFrameTransmitter.m */; };
+		D39F6A111E6CC81A004089BA /* QMReceiverConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D39F6A101E6CC81A004089BA /* QMReceiverConfig.m */; };
+		D39F6A131E6CC826004089BA /* QMFrameReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = D39F6A121E6CC826004089BA /* QMFrameReceiver.m */; };
+		D39F6A181E6CE824004089BA /* QMTransmitterConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = D39F69ED1E6CA472004089BA /* QMTransmitterConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D39F6A191E6CE827004089BA /* QMFrameTransmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = D39F69EE1E6CA4B8004089BA /* QMFrameTransmitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D39F6A1A1E6CE82A004089BA /* QMReceiverConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = D39F69EF1E6CA4C6004089BA /* QMReceiverConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D39F6A1B1E6CE82C004089BA /* QMFrameReceiver.h in Headers */ = {isa = PBXBuildFile; fileRef = D39F69F01E6CA4D0004089BA /* QMFrameReceiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +46,9 @@
 		D39F69F11E6CA6D6004089BA /* QMTransmitterConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMTransmitterConfig.m; sourceTree = "<group>"; };
 		D39F69FB1E6CB55B004089BA /* apple.toolchain.cmake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = apple.toolchain.cmake; sourceTree = "<group>"; };
 		D39F69FC1E6CB55B004089BA /* build-c-libraries.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "build-c-libraries.sh"; sourceTree = "<group>"; };
+		D39F6A0E1E6CC7B2004089BA /* QMFrameTransmitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMFrameTransmitter.m; sourceTree = "<group>"; };
+		D39F6A101E6CC81A004089BA /* QMReceiverConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMReceiverConfig.m; sourceTree = "<group>"; };
+		D39F6A121E6CC826004089BA /* QMFrameReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMFrameReceiver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,10 +97,13 @@
 				D34332321E5B961B0057EB54 /* QuietModemKit.h */,
 				D34332331E5B961B0057EB54 /* Info.plist */,
 				D39F69ED1E6CA472004089BA /* QMTransmitterConfig.h */,
-				D39F69EE1E6CA4B8004089BA /* QMFrameTransmitter.h */,
-				D39F69EF1E6CA4C6004089BA /* QMReceiverConfig.h */,
-				D39F69F01E6CA4D0004089BA /* QMFrameReceiver.h */,
 				D39F69F11E6CA6D6004089BA /* QMTransmitterConfig.m */,
+				D39F69EE1E6CA4B8004089BA /* QMFrameTransmitter.h */,
+				D39F6A0E1E6CC7B2004089BA /* QMFrameTransmitter.m */,
+				D39F69EF1E6CA4C6004089BA /* QMReceiverConfig.h */,
+				D39F6A101E6CC81A004089BA /* QMReceiverConfig.m */,
+				D39F69F01E6CA4D0004089BA /* QMFrameReceiver.h */,
+				D39F6A121E6CC826004089BA /* QMFrameReceiver.m */,
 			);
 			path = QuietModemKit;
 			sourceTree = "<group>";
@@ -135,6 +148,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D34332401E5B961B0057EB54 /* QuietModemKit.h in Headers */,
+				D39F6A181E6CE824004089BA /* QMTransmitterConfig.h in Headers */,
+				D39F6A191E6CE827004089BA /* QMFrameTransmitter.h in Headers */,
+				D39F6A1A1E6CE82A004089BA /* QMReceiverConfig.h in Headers */,
+				D39F6A1B1E6CE82C004089BA /* QMFrameReceiver.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +275,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D39F69F21E6CA6D6004089BA /* QMTransmitterConfig.m in Sources */,
+				D39F6A111E6CC81A004089BA /* QMReceiverConfig.m in Sources */,
+				D39F6A131E6CC826004089BA /* QMFrameReceiver.m in Sources */,
+				D39F6A0F1E6CC7B2004089BA /* QMFrameTransmitter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
