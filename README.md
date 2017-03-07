@@ -5,6 +5,8 @@ This is the iOS framework for https://github.com/quiet/quiet
 
 With this library, you can send data through sound.
 
+Live demo: https://quiet.github.com/quiet-js/
+
 Other platforms:
 * Javascript: https://github.com/quiet/quiet-js
 * Android: https://github.com/quiet/org.quietmodem.Quiet
