@@ -29,7 +29,9 @@ static void quiet_frame_receiver_callback(void *user_data, AudioQueueRef queue, 
             written = quiet_decoder_recv(dec, d->recvBuffer, d->recvBufferLength);
             if (written > 0) {
                 NSData *recv = [NSData dataWithBytes:d->recvBuffer length:written];
-                d->callback(recv);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    d->callback(recv);
+                });
             }
         }
     }
@@ -40,6 +42,7 @@ static void quiet_frame_receiver_callback(void *user_data, AudioQueueRef queue, 
     if ([[AVAudioSession sharedInstance] recordPermission] != AVAudioSessionRecordPermissionGranted) {
         return nil;
     }
+    
     
     self = [super init];
     if (!self) {
