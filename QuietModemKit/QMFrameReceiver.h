@@ -13,6 +13,7 @@ typedef void (^QMFrameReceiverCallback)(NSData *frame);
 @interface QMFrameReceiver : NSObject
 - (id)initWithConfig:(QMReceiverConfig *)conf;
 - (NSData *)receive;
+- (void)setReceiveCallback:(QMFrameReceiverCallback)newCallback;
 - (void)setBlocking:(long)seconds withNano:(long)nano;
 - (void)setNonBlocking;
 - (void)close;

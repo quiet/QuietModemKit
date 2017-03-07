@@ -74,6 +74,10 @@ static void quiet_frame_receiver_callback(void *user_data, AudioQueueRef queue, 
     return self;
 }
 
+- (void)setReceiveCallback:(QMFrameReceiverCallback)newCallback {
+    callback = newCallback;
+}
+
 - (NSData *)receive {
     ssize_t written = quiet_decoder_recv(decoder, recvBuffer, recvBufferLength);
     if (written > 0) {
