@@ -68,6 +68,10 @@ int main(int argc, char * argv[]) {
 
 Note that we ask for the Record permission. This is required to use the receiver.
 
+Profiles
+--------------
+The modem can be used audibly or via ultrasonic sound. `QMTransmitterConfig` and `QMReceiverConfig` are used to select modem configuration. For a full list of valid keys, refer to the top-level keys of (quiet-profiles.json)[https://github.com/quiet/QuietModemKit/blob/master/quiet-profiles.json].
+
 License
 --------------
 3-Claused BSD, plus third-party licenses (mix of MIT and BSD, see licenses/)
