@@ -7,6 +7,7 @@
     quiet_decoder *decoder;
     QMFrameReceiverCallback callback;
     uint8_t *recvBuffer;
+    float *monoBuffer;
     unsigned int recvBufferLength;
     unsigned int audioBufferLength;
     unsigned int audioNumBuffers;
@@ -16,7 +17,10 @@ static void quiet_frame_receiver_callback(void *user_data, AudioQueueRef queue, 
     float *casted_buffer = (float *)buffer->mAudioData;
     QMFrameReceiver *d = (__bridge id)user_data;
     quiet_decoder *dec = d->decoder;
-    quiet_decoder_consume(dec, casted_buffer, d->audioBufferLength);
+    for (int i = 0; i < d->audioBufferLength; i++) {
+        d->monoBuffer[i] = casted_buffer[i * 2];
+    }
+    quiet_decoder_consume(dec, d->monoBuffer, d->audioBufferLength);
     // XXX no callback?
     // XXX don't enqueue on consume close
     if (d->callback != NULL) {
@@ -46,6 +50,7 @@ static void quiet_frame_receiver_callback(void *user_data, AudioQueueRef queue, 
     callback = NULL;
     audioNumBuffers = conf.numBuffers;
     audioBufferLength = conf.bufferLength;
+    monoBuffer = malloc(audioBufferLength * sizeof(float));
     recvBufferLength = 1 << 16;
     recvBuffer = malloc(recvBufferLength);
     
@@ -54,8 +59,8 @@ static void quiet_frame_receiver_callback(void *user_data, AudioQueueRef queue, 
     format.mFormatID = kAudioFormatLinearPCM;
     format.mFormatFlags = kLinearPCMFormatFlagIsFloat;
     format.mBitsPerChannel = sizeof(float) * 8;
-    format.mChannelsPerFrame = 1;
-    format.mBytesPerFrame = sizeof(float) * 1;
+    format.mChannelsPerFrame = 2;
+    format.mBytesPerFrame = sizeof(float) * 2;
     format.mFramesPerPacket = 1;
     format.mBytesPerPacket = format.mBytesPerFrame * format.mFramesPerPacket;
     
@@ -64,8 +69,8 @@ static void quiet_frame_receiver_callback(void *user_data, AudioQueueRef queue, 
     buffers = malloc(audioNumBuffers * sizeof(AudioQueueBufferRef));
     
     for (unsigned int i = 0; i < audioNumBuffers; i++) {
-        AudioQueueAllocateBuffer(queue, sizeof(float) * audioBufferLength, &buffers[i]);
-        buffers[i]->mAudioDataByteSize = sizeof(float) * audioBufferLength;
+        AudioQueueAllocateBuffer(queue, sizeof(float) * audioBufferLength * 2, &buffers[i]);
+        buffers[i]->mAudioDataByteSize = sizeof(float) * audioBufferLength * 2;
         quiet_frame_receiver_callback((__bridge void *)(self), queue, buffers[i], NULL, 0, NULL);
     }
     
