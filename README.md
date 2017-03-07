@@ -29,6 +29,9 @@ int main(int argc, char * argv[]) {
     [tx send:frame];
 
     CFRunLoopRun();
+
+    [tx close];
+
     return 0;
 }
 
@@ -38,20 +41,27 @@ Receiver:
 ```objc
 #import <QuietModemKit/QuietModemKit.h>
 
+static QMFrameReceiver *rx;
+
+void (^recv_callback)(NSData*) = ^(NSData *frame){
+    printf("%s\n", [frame bytes]);
+};
+
 void (^request_callback)(BOOL) = ^(BOOL granted){
     QMReceiverConfig *rxConf = [[QMReceiverConfig alloc] initWithKey:@"ultrasonic-experimental"];
-
-    QMFrameReceiver *rx = [[QMFrameReceiver alloc] initWithConfig:rxConf];
-
-    sleep(8);
-    NSData *rcv = [rx receive];
-    printf("%s\n", [rcv bytes]);
+    rx = [[QMFrameReceiver alloc] initWithConfig:rxConf];
+    [rx setReceiveCallback:recv_callback];
 };
 
 int main(int argc, char * argv[]) {
     [[AVAudioSession sharedInstance] requestRecordPermission:request_callback];
 
     CFRunLoopRun();
+
+    if (rx != nil) {
+        [rx close];
+    }
+
     return 0;
 }
 ```
