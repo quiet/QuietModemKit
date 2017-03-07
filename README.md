@@ -16,7 +16,7 @@ It is recommended that you use Carthage to build QuietModemKit. Simply add `gith
 Example
 --------------
 Transmitter:
-```
+```objc
 #import <QuietModemKit/QuietModemKit.h>
 
 int main(int argc, char * argv[]) {
@@ -35,7 +35,7 @@ int main(int argc, char * argv[]) {
 ```
 
 Receiver:
-```
+```objc
 #import <QuietModemKit/QuietModemKit.h>
 
 void (^request_callback)(BOOL) = ^(BOOL granted){
