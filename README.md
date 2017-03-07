@@ -26,7 +26,7 @@ int main(int argc, char * argv[]) {
 
     QMFrameTransmitter *tx = [[QMFrameTransmitter alloc] initWithConfig:txConf];
 
-    NSString *frame_str = @"asdfsd";
+    NSString *frame_str = @"Hello, World!";
     NSData *frame = [frame_str dataUsingEncoding:NSUTF8StringEncoding];
     [tx send:frame];
 
