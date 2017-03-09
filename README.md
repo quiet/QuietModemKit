@@ -11,6 +11,24 @@ Other platforms:
 * Javascript: https://github.com/quiet/quiet-js
 * Android: https://github.com/quiet/org.quietmodem.Quiet
 
+Why sound? Isn't that outdated?
+---------------
+If you are old enough, you may remember using dial-up modems to connect to the internet. In a sense, this package brings that back. While it's true that this is somewhat of a retro approach, consider the advantages of using sound.
+
+* Highly cross-platform. Any device with speakers and a microphone and sufficient computational power can use this medium to communicate.
+
+* No pairing. Unlike Bluetooth, sound can be used instantly without the need to pair devices. This reduces the friction and improves the user experience.
+
+* Embeddable content. Similar to a QR code, short packets of data can be encoded into streaming or recorded audio and can then be later decoded by this package.
+
+What does it sound like?
+---------------
+The answer to this depends on which operating mode you choose. Quiet provides audible and near-ultrasonic modes. Audible modes sound something like a puff of air. The near-ultrasonic modes run at 17+kHz and are virtually inaudible to adults. Either mode can operate at relatively low volumes as long as there isn't too much background noise.
+
+How fast does it go?
+---------------
+Quiet's provided audible mode transfers at approximately 7kbps. In cases where two devices are connected over a cable (via 3.5mm jack) it can run in cable mode, which transfers at approximately 64kbps.
+
 Building
 --------------
 It is recommended that you use Carthage to build QuietModemKit. Simply add `github "Quiet/QuietModemKit"` to your Cartfile and run `carthage update`.
