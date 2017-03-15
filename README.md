@@ -1,7 +1,7 @@
 QuietModemKit
 ==============
 
-[![Quiet Modem Chat](https://discordapp.com/api/guilds/290985648054206464/embed.png?style=shield)](https://discordapp.com/invite/TMKfR)
+[![Quiet Modem Chat](https://discordapp.com/api/guilds/290985648054206464/embed.png?style=shield)](https://discordapp.com/invite/eRw5UjF)
 
 This is the iOS framework for https://github.com/quiet/quiet
 
