@@ -13,6 +13,10 @@ static const unsigned int default_buffer_length = 4096;
     
     _opt = quiet_decoder_profile_str(profile.UTF8String, key.UTF8String);
     
+    if (!_opt) {
+        return nil;
+    }
+
     _numBuffers = default_num_buffers;
     _bufferLength = default_buffer_length;
     
