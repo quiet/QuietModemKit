@@ -34,6 +34,10 @@ void output_callback(void *user_data, AudioQueueRef queue, AudioQueueBufferRef b
 }
 
 - (id)initWithConfig:(QMTransmitterConfig *)conf {
+    if (!conf) {
+        return nil;
+    }
+
     self = [super init];
     if (!self) {
         return nil;

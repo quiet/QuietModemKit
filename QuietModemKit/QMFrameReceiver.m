@@ -39,6 +39,10 @@ static void quiet_frame_receiver_callback(void *user_data, AudioQueueRef queue, 
 }
 
 - (id)initWithConfig:(QMReceiverConfig *)conf {
+    if (!conf) {
+        return nil;
+    }
+
     if ([[AVAudioSession sharedInstance] recordPermission] != AVAudioSessionRecordPermissionGranted) {
         return nil;
     }
