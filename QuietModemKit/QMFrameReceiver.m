@@ -46,6 +46,8 @@ static void quiet_frame_receiver_callback(void *user_data, AudioQueueRef queue, 
     if ([[AVAudioSession sharedInstance] recordPermission] != AVAudioSessionRecordPermissionGranted) {
         return nil;
     }
+
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error: NULL];
     
     
     self = [super init];
