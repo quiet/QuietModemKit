@@ -47,7 +47,7 @@ static void quiet_frame_receiver_callback(void *user_data, AudioQueueRef queue, 
         return nil;
     }
 
-    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error: NULL];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord withOptions:(AVAudioSessionCategoryOptionDefaultToSpeaker|AVAudioSessionCategoryOptionMixWithOthers) error: NULL];
     
     
     self = [super init];
