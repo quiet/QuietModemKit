@@ -44,8 +44,8 @@ static const NSString *lasterrorKey = @"QMSocket_Lasterror";
   sock_addr.sin_port = htons((short)[addr port]);
   sock_addr.sin_addr.s_addr = [addr ip];
 
-  int res =
-      lwip_bind(self.lwip_fd, (struct lwip_sockaddr *)&sock_addr, sizeof(sock_addr));
+  int res = lwip_bind(self.lwip_fd, (struct lwip_sockaddr *)&sock_addr,
+                      sizeof(sock_addr));
 
   if (res < 0) {
     [[self class] updateLastError];
@@ -100,8 +100,8 @@ static const NSString *lasterrorKey = @"QMSocket_Lasterror";
   struct lwip_sockaddr_in local;
   lwip_socklen_t local_len = sizeof(local);
 
-  int res =
-      lwip_getsockname(self.lwip_fd, (struct lwip_sockaddr *)&local, &local_len);
+  int res = lwip_getsockname(self.lwip_fd, (struct lwip_sockaddr *)&local,
+                             &local_len);
 
   if (res < 0) {
     [[self class] updateLastError];
@@ -123,8 +123,8 @@ static const NSString *lasterrorKey = @"QMSocket_Lasterror";
   struct lwip_sockaddr_in remote;
   lwip_socklen_t remote_len = sizeof(remote);
 
-  int res =
-      lwip_getpeername(self.lwip_fd, (struct lwip_sockaddr *)&remote, &remote_len);
+  int res = lwip_getpeername(self.lwip_fd, (struct lwip_sockaddr *)&remote,
+                             &remote_len);
 
   if (res < 0) {
     [[self class] updateLastError];
@@ -186,8 +186,8 @@ static const NSString *lasterrorKey = @"QMSocket_Lasterror";
 - (BOOL)getReuseAddress {
   int reuse;
   lwip_socklen_t len = sizeof(reuse);
-  int res = lwip_getsockopt(self.lwip_fd, LWIP_SOL_SOCKET, LWIP_SO_REUSEADDR, &reuse,
-                            &len);
+  int res = lwip_getsockopt(self.lwip_fd, LWIP_SOL_SOCKET, LWIP_SO_REUSEADDR,
+                            &reuse, &len);
 
   if (res < 0) {
     [[self class] updateLastError];
@@ -242,8 +242,8 @@ static const NSString *lasterrorKey = @"QMSocket_Lasterror";
 - (BOOL)getOOBInline {
   int oob;
   lwip_socklen_t len = sizeof(oob);
-  int res =
-      lwip_getsockopt(self.lwip_fd, LWIP_SOL_SOCKET, LWIP_SO_OOBINLINE, &oob, &len);
+  int res = lwip_getsockopt(self.lwip_fd, LWIP_SOL_SOCKET, LWIP_SO_OOBINLINE,
+                            &oob, &len);
 
   if (res < 0) {
     [[self class] updateLastError];
@@ -256,8 +256,8 @@ static const NSString *lasterrorKey = @"QMSocket_Lasterror";
 - (int)getSocketLinger {
   int linger;
   lwip_socklen_t len = sizeof(linger);
-  int res =
-      lwip_getsockopt(self.lwip_fd, LWIP_SOL_SOCKET, LWIP_SO_LINGER, &linger, &len);
+  int res = lwip_getsockopt(self.lwip_fd, LWIP_SOL_SOCKET, LWIP_SO_LINGER,
+                            &linger, &len);
 
   if (res < 0) {
     [[self class] updateLastError];
@@ -283,8 +283,8 @@ static const NSString *lasterrorKey = @"QMSocket_Lasterror";
 
 - (BOOL)setReceiveBufferSize:(int)size {
   lwip_socklen_t len = sizeof(size);
-  int res =
-      lwip_setsockopt(self.lwip_fd, LWIP_SOL_SOCKET, LWIP_SO_RCVBUF, &size, len);
+  int res = lwip_setsockopt(self.lwip_fd, LWIP_SOL_SOCKET, LWIP_SO_RCVBUF,
+                            &size, len);
 
   if (res < 0) {
     [[self class] updateLastError];
@@ -296,8 +296,8 @@ static const NSString *lasterrorKey = @"QMSocket_Lasterror";
 
 - (BOOL)setSendBufferSize:(int)size {
   lwip_socklen_t len = sizeof(size);
-  int res =
-      lwip_setsockopt(self.lwip_fd, LWIP_SOL_SOCKET, LWIP_SO_SNDBUF, &size, len);
+  int res = lwip_setsockopt(self.lwip_fd, LWIP_SOL_SOCKET, LWIP_SO_SNDBUF,
+                            &size, len);
 
   if (res < 0) {
     [[self class] updateLastError];
@@ -309,8 +309,8 @@ static const NSString *lasterrorKey = @"QMSocket_Lasterror";
 
 - (BOOL)setReuseAddress:(BOOL)reuse {
   lwip_socklen_t len = sizeof(reuse);
-  int res =
-      lwip_setsockopt(self.lwip_fd, LWIP_SOL_SOCKET, LWIP_SO_REUSEADDR, &reuse, len);
+  int res = lwip_setsockopt(self.lwip_fd, LWIP_SOL_SOCKET, LWIP_SO_REUSEADDR,
+                            &reuse, len);
 
   if (res < 0) {
     [[self class] updateLastError];
@@ -336,7 +336,8 @@ static const NSString *lasterrorKey = @"QMSocket_Lasterror";
 
 - (BOOL)setTrafficClass:(int)class {
   lwip_socklen_t len = sizeof(class);
-  int res = lwip_setsockopt(self.lwip_fd, LWIP_IPPROTO_IP, LWIP_IP_TOS, &class, len);
+  int res =
+      lwip_setsockopt(self.lwip_fd, LWIP_IPPROTO_IP, LWIP_IP_TOS, &class, len);
 
   if (res < 0) {
     [[self class] updateLastError];
@@ -363,8 +364,8 @@ static const NSString *lasterrorKey = @"QMSocket_Lasterror";
 - (BOOL)setOOBInline:(BOOL)oi {
   int oob = oi;
   lwip_socklen_t len = sizeof(oob);
-  int res =
-      lwip_setsockopt(self.lwip_fd, LWIP_SOL_SOCKET, LWIP_SO_OOBINLINE, &oob, len);
+  int res = lwip_setsockopt(self.lwip_fd, LWIP_SOL_SOCKET, LWIP_SO_OOBINLINE,
+                            &oob, len);
 
   if (res < 0) {
     [[self class] updateLastError];
@@ -376,8 +377,8 @@ static const NSString *lasterrorKey = @"QMSocket_Lasterror";
 
 - (BOOL)setSocketLinger:(int)linger {
   lwip_socklen_t len = sizeof(linger);
-  int res =
-      lwip_setsockopt(self.lwip_fd, LWIP_SOL_SOCKET, LWIP_SO_LINGER, &linger, len);
+  int res = lwip_setsockopt(self.lwip_fd, LWIP_SOL_SOCKET, LWIP_SO_LINGER,
+                            &linger, len);
 
   if (res < 0) {
     [[self class] updateLastError];

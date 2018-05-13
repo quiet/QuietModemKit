@@ -5,8 +5,8 @@
 #import "QuietReceiver.h"
 
 @interface QMFrameReceiver ()
-@property (atomic) QMFrameReceiverCallback frameReceiverCallback;
-@property (atomic) dispatch_queue_t callbackQueue;
+@property(atomic) QMFrameReceiverCallback frameReceiverCallback;
+@property(atomic) dispatch_queue_t callbackQueue;
 @end
 
 @implementation QMFrameReceiver {
@@ -66,7 +66,7 @@
   }
 
   self.frameReceiverCallback = nil;
-  
+
   return self;
 }
 
@@ -74,13 +74,14 @@
   [self setReceiveCallback:callback onQueue:dispatch_get_main_queue()];
 }
 
--(void)setReceiveCallback:(QMFrameReceiverCallback)callback onQueue:(dispatch_queue_t)queue {
+- (void)setReceiveCallback:(QMFrameReceiverCallback)callback
+                   onQueue:(dispatch_queue_t)queue {
   self.frameReceiverCallback = callback;
   self.callbackQueue = queue;
   if (callbackThread == nil) {
     callbackThread = [[NSThread alloc] initWithBlock:^{
       [self setBlocking:0 withNano:0];
-      while(true) {
+      while (true) {
         NSData *recv = [self receive];
         if (recv == nil) {
           return;
@@ -97,7 +98,7 @@
   return [consumer receive];
 }
 
-- (size_t)receiveTo:(NSMutableData*)data {
+- (size_t)receiveTo:(NSMutableData *)data {
   return [consumer receiveTo:data];
 }
 

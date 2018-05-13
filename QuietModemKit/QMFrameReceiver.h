@@ -14,9 +14,10 @@ typedef void (^QMFrameReceiverCallback)(NSData *frame);
 - (id)initWithConfig:(QMReceiverConfig *)conf;
 - (id)initLoopbackWithConfig:(QMReceiverConfig *)conf;
 - (NSData *)receive;
-- (size_t)receiveTo:(NSMutableData*)data;
+- (size_t)receiveTo:(NSMutableData *)data;
 - (void)setReceiveCallback:(QMFrameReceiverCallback)callback;
-- (void)setReceiveCallback:(QMFrameReceiverCallback)callback onQueue:(dispatch_queue_t)queue;
+- (void)setReceiveCallback:(QMFrameReceiverCallback)callback
+                   onQueue:(dispatch_queue_t)queue;
 - (void)setBlocking:(long)seconds withNano:(long)nano;
 - (void)setNonBlocking;
 - (void)close;

@@ -1,9 +1,9 @@
 #import "QMTcpSocket.h"
 #import "QuietModemKitPrivate.h"
 
-#include <quiet-lwip/quiet-lwip.h>
 #include <quiet-lwip/lwip-netdb.h>
 #include <quiet-lwip/lwip-socket.h>
+#include <quiet-lwip/quiet-lwip.h>
 
 @implementation QMTcpSocket
 
@@ -22,22 +22,21 @@ static const int backlog = 4;
   if (!self) {
     return nil;
   }
-  
+
   self.lwip_fd = lwip_socket(LWIP_AF_INET, LWIP_SOCK_STREAM, 0);
   if (self.lwip_fd < 0) {
     return nil;
   }
-  
+
   return self;
 }
-
 
 - (id)initWithLwipFd:(int)fd {
   self = [super init];
   if (!self) {
     return nil;
   }
-  
+
   self.lwip_fd = fd;
   return self;
 }
@@ -47,11 +46,11 @@ static const int backlog = 4;
   if (!self) {
     return nil;
   }
-  
+
   if (![self bind:addr]) {
     return nil;
   }
-  
+
   return self;
 }
 
@@ -61,21 +60,21 @@ static const int backlog = 4;
     [[self class] updateLastError];
     return NO;
   }
-  
+
   return YES;
 }
 
 - (QMTcpSocket *)accept {
   struct lwip_sockaddr_in recv_from;
   lwip_socklen_t recv_from_len = sizeof(recv_from);
-  int accept_fd =
-  lwip_accept(self.lwip_fd, (struct lwip_sockaddr *)&recv_from, &recv_from_len);
-  
+  int accept_fd = lwip_accept(self.lwip_fd, (struct lwip_sockaddr *)&recv_from,
+                              &recv_from_len);
+
   if (accept_fd < 0) {
     [[self class] updateLastError];
     return nil;
   }
-  
+
   return [[[self class] alloc] initWithLwipFd:accept_fd];
 }
 
@@ -100,12 +99,12 @@ static const int backlog = 4;
   lwip_socklen_t len = sizeof(nodelay);
   int res = lwip_getsockopt(self.lwip_fd, LWIP_SOL_SOCKET, LWIP_TCP_NODELAY,
                             &nodelay, &len);
-  
+
   if (res < 0) {
     [[self class] updateLastError];
     return NO;
   }
-  
+
   return nodelay;
 }
 
@@ -114,12 +113,12 @@ static const int backlog = 4;
   lwip_socklen_t len = sizeof(nodelay);
   int res = lwip_setsockopt(self.lwip_fd, LWIP_SOL_SOCKET, LWIP_TCP_NODELAY,
                             &nodelay, len);
-  
+
   if (res < 0) {
     [[self class] updateLastError];
     return NO;
   }
-  
+
   return YES;
 }
 

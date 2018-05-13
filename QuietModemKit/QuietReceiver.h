@@ -7,7 +7,7 @@
 - (id)initWithConfig:(quiet_decoder_options *)conf
       withSampleRate:(unsigned int)rate;
 - (NSData *)receive;
-- (size_t)receiveTo:(NSMutableData*)data;
+- (size_t)receiveTo:(NSMutableData *)data;
 - (void)setBlocking:(long)seconds withNano:(long)nano;
 - (void)setNonBlocking;
 - (void)close;

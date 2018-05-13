@@ -12,7 +12,7 @@ FOUNDATION_EXPORT const unsigned char QuietModemKitVersionString[];
 #import <QuietModemKit/QMNetworkInterfaceConfig.h>
 #import <QuietModemKit/QMReceiverConfig.h>
 #import <QuietModemKit/QMSocket.h>
-#import <QuietModemKit/QMTcpSocket.h>
-#import <QuietModemKit/QMUdpSocket.h>
 #import <QuietModemKit/QMSocketAddress.h>
+#import <QuietModemKit/QMTcpSocket.h>
 #import <QuietModemKit/QMTransmitterConfig.h>
+#import <QuietModemKit/QMUdpSocket.h>
