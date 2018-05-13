@@ -10,6 +10,38 @@
 		D34332391E5B961B0057EB54 /* QuietModemKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D343322F1E5B961B0057EB54 /* QuietModemKit.framework */; };
 		D343323E1E5B961B0057EB54 /* QuietModemKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D343323D1E5B961B0057EB54 /* QuietModemKitTests.m */; };
 		D34332401E5B961B0057EB54 /* QuietModemKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D34332321E5B961B0057EB54 /* QuietModemKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D354C5F6208311CF004E1E74 /* QMNetworkInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = D354C5F5208311CF004E1E74 /* QMNetworkInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D354C5F8208322AC004E1E74 /* QMNetworkInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = D354C5F7208322AC004E1E74 /* QMNetworkInterface.m */; };
+		D354C5FA208325D0004E1E74 /* QMNetworkInterfaceConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = D354C5F9208325D0004E1E74 /* QMNetworkInterfaceConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D354C5FC208325DD004E1E74 /* QMNetworkInterfaceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D354C5FB208325DD004E1E74 /* QMNetworkInterfaceConfig.m */; };
+		D354C64E208BDB0A004E1E74 /* QuietModemAudio.h in Headers */ = {isa = PBXBuildFile; fileRef = D354C64D208BDB0A004E1E74 /* QuietModemAudio.h */; };
+		D354C651208BDB45004E1E74 /* LoopbackAudioOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = D354C64F208BDB45004E1E74 /* LoopbackAudioOutput.h */; };
+		D354C652208BDB45004E1E74 /* LoopbackAudioOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = D354C650208BDB45004E1E74 /* LoopbackAudioOutput.m */; };
+		D354C655208BDB53004E1E74 /* LoopbackAudioInput.h in Headers */ = {isa = PBXBuildFile; fileRef = D354C653208BDB53004E1E74 /* LoopbackAudioInput.h */; };
+		D354C656208BDB53004E1E74 /* LoopbackAudioInput.m in Sources */ = {isa = PBXBuildFile; fileRef = D354C654208BDB53004E1E74 /* LoopbackAudioInput.m */; };
+		D354C659208BDB69004E1E74 /* DeviceAudioInput.h in Headers */ = {isa = PBXBuildFile; fileRef = D354C657208BDB69004E1E74 /* DeviceAudioInput.h */; };
+		D354C65A208BDB69004E1E74 /* DeviceAudioInput.m in Sources */ = {isa = PBXBuildFile; fileRef = D354C658208BDB69004E1E74 /* DeviceAudioInput.m */; };
+		D354C65D208BDB7B004E1E74 /* DeviceAudioOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = D354C65B208BDB7B004E1E74 /* DeviceAudioOutput.h */; };
+		D354C661208BE02C004E1E74 /* LoopbackAudio.h in Headers */ = {isa = PBXBuildFile; fileRef = D354C65F208BE02C004E1E74 /* LoopbackAudio.h */; };
+		D354C662208BE02C004E1E74 /* LoopbackAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = D354C660208BE02C004E1E74 /* LoopbackAudio.m */; };
+		D3832FEB208DBD77008A2E18 /* QuietTransmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = D3832FE9208DBD77008A2E18 /* QuietTransmitter.h */; };
+		D3832FEC208DBD77008A2E18 /* QuietTransmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = D3832FEA208DBD77008A2E18 /* QuietTransmitter.m */; };
+		D3832FF12093137A008A2E18 /* DeviceAudioOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = D354C65C208BDB7B004E1E74 /* DeviceAudioOutput.m */; };
+		D3832FF420931A06008A2E18 /* QuietReceiver.h in Headers */ = {isa = PBXBuildFile; fileRef = D3832FF220931A06008A2E18 /* QuietReceiver.h */; };
+		D3832FF520931A06008A2E18 /* QuietReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = D3832FF320931A06008A2E18 /* QuietReceiver.m */; };
+		D3832FF82096E530008A2E18 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3832FF72096E530008A2E18 /* AVFoundation.framework */; };
+		D3832FFA2096EB5D008A2E18 /* QuietModemDeviceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3832FF92096EB5D008A2E18 /* QuietModemDeviceTests.m */; };
+		D3833009209709FB008A2E18 /* QuietLwipInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = D3833007209709FB008A2E18 /* QuietLwipInterface.h */; };
+		D383300A209709FB008A2E18 /* QuietLwipInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = D3833008209709FB008A2E18 /* QuietLwipInterface.m */; };
+		D383300C20970F7C008A2E18 /* QuietModemAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = D383300B20970F7C008A2E18 /* QuietModemAudio.m */; };
+		D383300F209856E4008A2E18 /* QMSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = D383300D209856E4008A2E18 /* QMSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3833010209856E4008A2E18 /* QMSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D383300E209856E4008A2E18 /* QMSocket.m */; };
+		D383301320985DFE008A2E18 /* QMSocketAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = D383301120985DFE008A2E18 /* QMSocketAddress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D383301420985DFE008A2E18 /* QMSocketAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = D383301220985DFE008A2E18 /* QMSocketAddress.m */; };
+		D38330A420A7F769008A2E18 /* QMUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = D38330A220A7F769008A2E18 /* QMUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D38330A520A7F769008A2E18 /* QMUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D38330A320A7F769008A2E18 /* QMUdpSocket.m */; };
+		D38330A820A7F786008A2E18 /* QMTcpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = D38330A620A7F786008A2E18 /* QMTcpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D38330A920A7F786008A2E18 /* QMTcpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D38330A720A7F786008A2E18 /* QMTcpSocket.m */; };
 		D39F69F21E6CA6D6004089BA /* QMTransmitterConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D39F69F11E6CA6D6004089BA /* QMTransmitterConfig.m */; };
 		D39F69FF1E6CB55B004089BA /* apple.toolchain.cmake in Resources */ = {isa = PBXBuildFile; fileRef = D39F69FB1E6CB55B004089BA /* apple.toolchain.cmake */; };
 		D39F6A001E6CB55B004089BA /* build-c-libraries.sh in Resources */ = {isa = PBXBuildFile; fileRef = D39F69FC1E6CB55B004089BA /* build-c-libraries.sh */; };
@@ -40,6 +72,38 @@
 		D34332381E5B961B0057EB54 /* QuietModemKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuietModemKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D343323D1E5B961B0057EB54 /* QuietModemKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuietModemKitTests.m; sourceTree = "<group>"; };
 		D343323F1E5B961B0057EB54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D354C5F5208311CF004E1E74 /* QMNetworkInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMNetworkInterface.h; sourceTree = "<group>"; };
+		D354C5F7208322AC004E1E74 /* QMNetworkInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMNetworkInterface.m; sourceTree = "<group>"; };
+		D354C5F9208325D0004E1E74 /* QMNetworkInterfaceConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMNetworkInterfaceConfig.h; sourceTree = "<group>"; };
+		D354C5FB208325DD004E1E74 /* QMNetworkInterfaceConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMNetworkInterfaceConfig.m; sourceTree = "<group>"; };
+		D354C64D208BDB0A004E1E74 /* QuietModemAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuietModemAudio.h; sourceTree = "<group>"; };
+		D354C64F208BDB45004E1E74 /* LoopbackAudioOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoopbackAudioOutput.h; sourceTree = "<group>"; };
+		D354C650208BDB45004E1E74 /* LoopbackAudioOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoopbackAudioOutput.m; sourceTree = "<group>"; };
+		D354C653208BDB53004E1E74 /* LoopbackAudioInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoopbackAudioInput.h; sourceTree = "<group>"; };
+		D354C654208BDB53004E1E74 /* LoopbackAudioInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoopbackAudioInput.m; sourceTree = "<group>"; };
+		D354C657208BDB69004E1E74 /* DeviceAudioInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceAudioInput.h; sourceTree = "<group>"; };
+		D354C658208BDB69004E1E74 /* DeviceAudioInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceAudioInput.m; sourceTree = "<group>"; };
+		D354C65B208BDB7B004E1E74 /* DeviceAudioOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceAudioOutput.h; sourceTree = "<group>"; };
+		D354C65C208BDB7B004E1E74 /* DeviceAudioOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceAudioOutput.m; sourceTree = "<group>"; };
+		D354C65F208BE02C004E1E74 /* LoopbackAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoopbackAudio.h; sourceTree = "<group>"; };
+		D354C660208BE02C004E1E74 /* LoopbackAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoopbackAudio.m; sourceTree = "<group>"; };
+		D3832FE9208DBD77008A2E18 /* QuietTransmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuietTransmitter.h; sourceTree = "<group>"; };
+		D3832FEA208DBD77008A2E18 /* QuietTransmitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuietTransmitter.m; sourceTree = "<group>"; };
+		D3832FF220931A06008A2E18 /* QuietReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuietReceiver.h; sourceTree = "<group>"; };
+		D3832FF320931A06008A2E18 /* QuietReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuietReceiver.m; sourceTree = "<group>"; };
+		D3832FF72096E530008A2E18 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D3832FF92096EB5D008A2E18 /* QuietModemDeviceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuietModemDeviceTests.m; sourceTree = "<group>"; };
+		D3833007209709FB008A2E18 /* QuietLwipInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuietLwipInterface.h; sourceTree = "<group>"; };
+		D3833008209709FB008A2E18 /* QuietLwipInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuietLwipInterface.m; sourceTree = "<group>"; };
+		D383300B20970F7C008A2E18 /* QuietModemAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuietModemAudio.m; sourceTree = "<group>"; };
+		D383300D209856E4008A2E18 /* QMSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMSocket.h; sourceTree = "<group>"; };
+		D383300E209856E4008A2E18 /* QMSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMSocket.m; sourceTree = "<group>"; };
+		D383301120985DFE008A2E18 /* QMSocketAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMSocketAddress.h; sourceTree = "<group>"; };
+		D383301220985DFE008A2E18 /* QMSocketAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMSocketAddress.m; sourceTree = "<group>"; };
+		D38330A220A7F769008A2E18 /* QMUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMUdpSocket.h; sourceTree = "<group>"; };
+		D38330A320A7F769008A2E18 /* QMUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMUdpSocket.m; sourceTree = "<group>"; };
+		D38330A620A7F786008A2E18 /* QMTcpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMTcpSocket.h; sourceTree = "<group>"; };
+		D38330A720A7F786008A2E18 /* QMTcpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMTcpSocket.m; sourceTree = "<group>"; };
 		D39F69ED1E6CA472004089BA /* QMTransmitterConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QMTransmitterConfig.h; sourceTree = "<group>"; };
 		D39F69EE1E6CA4B8004089BA /* QMFrameTransmitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QMFrameTransmitter.h; sourceTree = "<group>"; };
 		D39F69EF1E6CA4C6004089BA /* QMReceiverConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QMReceiverConfig.h; sourceTree = "<group>"; };
@@ -59,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3832FF82096E530008A2E18 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +148,7 @@
 				D343323C1E5B961B0057EB54 /* QuietModemKitTests */,
 				D34332301E5B961B0057EB54 /* Products */,
 				D343324C1E5B96B60057EB54 /* Config */,
+				D3832FF62096E530008A2E18 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +175,36 @@
 				D39F6A101E6CC81A004089BA /* QMReceiverConfig.m */,
 				D39F69F01E6CA4D0004089BA /* QMFrameReceiver.h */,
 				D39F6A121E6CC826004089BA /* QMFrameReceiver.m */,
+				D354C5F5208311CF004E1E74 /* QMNetworkInterface.h */,
+				D354C5F7208322AC004E1E74 /* QMNetworkInterface.m */,
+				D354C5F9208325D0004E1E74 /* QMNetworkInterfaceConfig.h */,
+				D354C5FB208325DD004E1E74 /* QMNetworkInterfaceConfig.m */,
+				D383300D209856E4008A2E18 /* QMSocket.h */,
+				D383300E209856E4008A2E18 /* QMSocket.m */,
+				D38330A620A7F786008A2E18 /* QMTcpSocket.h */,
+				D38330A720A7F786008A2E18 /* QMTcpSocket.m */,
+				D38330A220A7F769008A2E18 /* QMUdpSocket.h */,
+				D38330A320A7F769008A2E18 /* QMUdpSocket.m */,
+				D383301120985DFE008A2E18 /* QMSocketAddress.h */,
+				D383301220985DFE008A2E18 /* QMSocketAddress.m */,
+				D354C64D208BDB0A004E1E74 /* QuietModemAudio.h */,
+				D383300B20970F7C008A2E18 /* QuietModemAudio.m */,
+				D354C64F208BDB45004E1E74 /* LoopbackAudioOutput.h */,
+				D354C650208BDB45004E1E74 /* LoopbackAudioOutput.m */,
+				D354C653208BDB53004E1E74 /* LoopbackAudioInput.h */,
+				D354C654208BDB53004E1E74 /* LoopbackAudioInput.m */,
+				D354C65F208BE02C004E1E74 /* LoopbackAudio.h */,
+				D354C660208BE02C004E1E74 /* LoopbackAudio.m */,
+				D354C65B208BDB7B004E1E74 /* DeviceAudioOutput.h */,
+				D354C65C208BDB7B004E1E74 /* DeviceAudioOutput.m */,
+				D354C657208BDB69004E1E74 /* DeviceAudioInput.h */,
+				D354C658208BDB69004E1E74 /* DeviceAudioInput.m */,
+				D3832FE9208DBD77008A2E18 /* QuietTransmitter.h */,
+				D3832FEA208DBD77008A2E18 /* QuietTransmitter.m */,
+				D3832FF220931A06008A2E18 /* QuietReceiver.h */,
+				D3832FF320931A06008A2E18 /* QuietReceiver.m */,
+				D3833007209709FB008A2E18 /* QuietLwipInterface.h */,
+				D3833008209709FB008A2E18 /* QuietLwipInterface.m */,
 			);
 			path = QuietModemKit;
 			sourceTree = "<group>";
@@ -116,6 +212,7 @@
 		D343323C1E5B961B0057EB54 /* QuietModemKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				D3832FF92096EB5D008A2E18 /* QuietModemDeviceTests.m */,
 				D343323D1E5B961B0057EB54 /* QuietModemKitTests.m */,
 				D343323F1E5B961B0057EB54 /* Info.plist */,
 			);
@@ -127,6 +224,14 @@
 			children = (
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		D3832FF62096E530008A2E18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3832FF72096E530008A2E18 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D39F69F71E6CB545004089BA /* lib */ = {
@@ -152,11 +257,26 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D354C661208BE02C004E1E74 /* LoopbackAudio.h in Headers */,
+				D354C5FA208325D0004E1E74 /* QMNetworkInterfaceConfig.h in Headers */,
+				D354C655208BDB53004E1E74 /* LoopbackAudioInput.h in Headers */,
 				D34332401E5B961B0057EB54 /* QuietModemKit.h in Headers */,
+				D354C5F6208311CF004E1E74 /* QMNetworkInterface.h in Headers */,
+				D354C651208BDB45004E1E74 /* LoopbackAudioOutput.h in Headers */,
+				D354C65D208BDB7B004E1E74 /* DeviceAudioOutput.h in Headers */,
+				D3832FEB208DBD77008A2E18 /* QuietTransmitter.h in Headers */,
+				D383300F209856E4008A2E18 /* QMSocket.h in Headers */,
 				D39F6A181E6CE824004089BA /* QMTransmitterConfig.h in Headers */,
+				D3832FF420931A06008A2E18 /* QuietReceiver.h in Headers */,
+				D383301320985DFE008A2E18 /* QMSocketAddress.h in Headers */,
 				D39F6A191E6CE827004089BA /* QMFrameTransmitter.h in Headers */,
+				D354C659208BDB69004E1E74 /* DeviceAudioInput.h in Headers */,
+				D38330A820A7F786008A2E18 /* QMTcpSocket.h in Headers */,
+				D3833009209709FB008A2E18 /* QuietLwipInterface.h in Headers */,
+				D354C64E208BDB0A004E1E74 /* QuietModemAudio.h in Headers */,
 				D39F6A1A1E6CE82A004089BA /* QMReceiverConfig.h in Headers */,
 				D39F6A1B1E6CE82C004089BA /* QMFrameReceiver.h in Headers */,
+				D38330A420A7F769008A2E18 /* QMUdpSocket.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +389,7 @@
 				"$(SRCROOT)/liquid-dsp/",
 				"$(SRCROOT)/quiet/",
 				"$(SRCROOT)/Build-Phases/",
+				"$(SRCROOT)/quiet-lwip/",
 			);
 			outputPaths = (
 				"$(SRCROOT)/include/",
@@ -285,10 +406,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D354C5FC208325DD004E1E74 /* QMNetworkInterfaceConfig.m in Sources */,
+				D3832FEC208DBD77008A2E18 /* QuietTransmitter.m in Sources */,
+				D354C652208BDB45004E1E74 /* LoopbackAudioOutput.m in Sources */,
+				D3833010209856E4008A2E18 /* QMSocket.m in Sources */,
+				D383300C20970F7C008A2E18 /* QuietModemAudio.m in Sources */,
+				D383300A209709FB008A2E18 /* QuietLwipInterface.m in Sources */,
 				D39F69F21E6CA6D6004089BA /* QMTransmitterConfig.m in Sources */,
 				D39F6A111E6CC81A004089BA /* QMReceiverConfig.m in Sources */,
+				D354C662208BE02C004E1E74 /* LoopbackAudio.m in Sources */,
 				D39F6A131E6CC826004089BA /* QMFrameReceiver.m in Sources */,
+				D38330A920A7F786008A2E18 /* QMTcpSocket.m in Sources */,
+				D38330A520A7F769008A2E18 /* QMUdpSocket.m in Sources */,
+				D354C65A208BDB69004E1E74 /* DeviceAudioInput.m in Sources */,
+				D354C656208BDB53004E1E74 /* LoopbackAudioInput.m in Sources */,
+				D3832FF520931A06008A2E18 /* QuietReceiver.m in Sources */,
 				D39F6A0F1E6CC7B2004089BA /* QMFrameTransmitter.m in Sources */,
+				D3832FF12093137A008A2E18 /* DeviceAudioOutput.m in Sources */,
+				D383301420985DFE008A2E18 /* QMSocketAddress.m in Sources */,
+				D354C5F8208322AC004E1E74 /* QMNetworkInterface.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D343323E1E5B961B0057EB54 /* QuietModemKitTests.m in Sources */,
+				D3832FFA2096EB5D008A2E18 /* QuietModemDeviceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,8 +552,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				"HEADER_SEARCH_PATHS[sdk=iphoneos*]" = "$SRCROOT/include/Debug-iphoneos";
-				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*]" = "$SRCROOT/include/Debug-iphonesimulator";
+				"HEADER_SEARCH_PATHS[sdk=*]" = (
+					"$SRCROOT/include/$CONFIGURATION-$PLATFORM_NAME",
+					"$SRCROOT/include/$CONFIGURATION-$PLATFORM_NAME/quiet-lwip/lwip",
+					"$SRCROOT/include/$CONFIGURATION-$PLATFORM_NAME/quiet-lwip/lwip/ipv4",
+				);
 				INFOPLIST_FILE = QuietModemKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -428,6 +568,7 @@
 					"-ljansson",
 					"-lliquid",
 					"-lfec",
+					"-lquiet_lwip",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Quiet.QuietModemKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -443,8 +584,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				"HEADER_SEARCH_PATHS[sdk=iphoneos*]" = "$SRCROOT/include/Release-iphoneos";
-				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*]" = "$SRCROOT/include/Release-iphonesimulator";
+				"HEADER_SEARCH_PATHS[sdk=*]" = (
+					"$SRCROOT/include/$CONFIGURATION-$PLATFORM_NAME",
+					"$SRCROOT/include/$CONFIGURATION-$PLATFORM_NAME/quiet-lwip/lwip",
+					"$SRCROOT/include/$CONFIGURATION-$PLATFORM_NAME/quiet-lwip/lwip/ipv4",
+				);
 				INFOPLIST_FILE = QuietModemKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -456,6 +600,7 @@
 					"-ljansson",
 					"-lliquid",
 					"-lfec",
+					"-lquiet_lwip",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Quiet.QuietModemKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";

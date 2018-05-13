@@ -10,3 +10,6 @@
 [submodule "quiet"]
 	path = quiet
 	url = https://github.com/quiet/quiet
+[submodule "quiet-lwip"]
+	path = quiet-lwip
+	url = https://github.com/quiet/quiet-lwip
