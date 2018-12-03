@@ -1,23 +1,19 @@
 #ifndef QMFrameReceiver_h
 #define QMFrameReceiver_h
 
-#import <AVFoundation/AVFoundation.h>
-#import <AudioToolbox/AudioQueue.h>
-#import <CoreAudio/CoreAudioTypes.h>
 #import <Foundation/Foundation.h>
+#include <AudioToolbox/AudioQueue.h>
+#include <CoreAudio/CoreAudioTypes.h>
+#include <AVFoundation/AVFoundation.h>
 
-#import "QMReceiverConfig.h"
+#include "QMReceiverConfig.h"
 
 typedef void (^QMFrameReceiverCallback)(NSData *frame);
 
 @interface QMFrameReceiver : NSObject
 - (id)initWithConfig:(QMReceiverConfig *)conf;
-- (id)initLoopbackWithConfig:(QMReceiverConfig *)conf;
 - (NSData *)receive;
-- (size_t)receiveTo:(NSMutableData *)data;
-- (void)setReceiveCallback:(QMFrameReceiverCallback)callback;
-- (void)setReceiveCallback:(QMFrameReceiverCallback)callback
-                   onQueue:(dispatch_queue_t)queue;
+- (void)setReceiveCallback:(QMFrameReceiverCallback)newCallback;
 - (void)setBlocking:(long)seconds withNano:(long)nano;
 - (void)setNonBlocking;
 - (void)close;

@@ -1,8 +1,8 @@
 #import "QMUdpSocket.h"
 #import "QuietModemKitPrivate.h"
 
-#include <quiet-lwip/lwip-socket.h>
 #include <quiet-lwip/quiet-lwip.h>
+#include <quiet-lwip/lwip-socket.h>
 
 @implementation QMUdpSocket
 
@@ -19,12 +19,12 @@
   if (!self) {
     return nil;
   }
-
+  
   self.lwip_fd = lwip_socket(LWIP_AF_INET, LWIP_SOCK_DGRAM, 0);
   if (self.lwip_fd < 0) {
     return nil;
   }
-
+  
   return self;
 }
 
@@ -33,16 +33,16 @@
   if (!self) {
     return nil;
   }
-
+  
   if (![self bind:addr]) {
     return nil;
   }
-
+  
   return self;
 }
 
 - (int)recvData:(NSMutableData *)data
-    fromAddress:(QMSocketAddress *__autoreleasing *)src {
+       fromAddress:(QMSocketAddress *__autoreleasing *)src {
   struct lwip_sockaddr_in from;
   lwip_socklen_t from_len = sizeof(from);
   int res = lwip_recvfrom(self.lwip_fd, [data mutableBytes], [data length], 0,
@@ -65,10 +65,10 @@
   remote.sin_family = LWIP_AF_INET;
   remote.sin_port = htons((short)dst.port);
   remote.sin_addr.s_addr = dst.ip;
-
+  
   int res = lwip_sendto(self.lwip_fd, [data bytes], [data length], 0,
                         (struct lwip_sockaddr *)&remote, sizeof(remote));
-
+  
   if (res > 0) {
     return res;
   }

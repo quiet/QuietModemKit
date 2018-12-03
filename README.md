@@ -33,9 +33,7 @@ Quiet's provided audible mode transfers at approximately 7kbps. In cases where t
 
 Building
 --------------
-CMake is required to build QuietModemKit. If you aren't sure if you have CMake installed, run `brew install cmake`.
-
-It is recommended that you use Carthage to build QuietModemKit. Simply run `brew install cmake` and then add `github "Quiet/QuietModemKit"` to your Cartfile and run `carthage update`.
+It is recommended that you use Carthage to build QuietModemKit. Simply add `github "Quiet/QuietModemKit"` to your Cartfile and run `carthage update`.
 
 Example
 --------------

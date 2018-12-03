@@ -36,10 +36,6 @@ mkdir -p "$BUILDPATH/quiet"
 cd "$BUILDPATH/quiet"
 cmake -DCMAKE_TOOLCHAIN_FILE="$SRCPATH/Build-Phases/apple.toolchain.cmake" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="$SYSROOT/usr" -DCMAKE_PREFIX_PATH="$SYSROOT" "$SRCPATH/quiet" && make && make install
 
-mkdir -p "$BUILDPATH/quiet-lwip"
-cd "$BUILDPATH/quiet-lwip"
-cmake -DCMAKE_TOOLCHAIN_FILE="$SRCPATH/Build-Phases/apple.toolchain.cmake" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="$SYSROOT/usr" -DCMAKE_PREFIX_PATH="$SYSROOT" "$SRCPATH/quiet-lwip" && make && make install
-
 mkdir -p "$LIBPATH"
 mkdir -p "$INCLUDEPATH"
 # lipo -create -output "$LIBPATH/$1/libfec.a" "$SYSROOTPATH/$1/usr/lib/libfec.a" "$SYSROOTPATH/$1-sim/usr/lib/libfec.a"
@@ -50,13 +46,11 @@ cp "$SYSROOTPATH/usr/lib/libfec.a" "$LIBPATH"
 cp "$SYSROOTPATH/usr/lib/libliquid.a" "$LIBPATH"
 cp "$SYSROOTPATH/usr/lib/libjansson.a" "$LIBPATH"
 cp "$SYSROOTPATH/usr/lib/libquiet.a" "$LIBPATH"
-cp "$SYSROOTPATH/usr/lib/libquiet_lwip.a" "$LIBPATH"
 cp "$SYSROOTPATH/usr/include/fec.h" "$INCLUDEPATH"
 cp -R "$SYSROOTPATH/usr/include/liquid" "$INCLUDEPATH"
 cp "$SYSROOTPATH/usr/include/jansson.h" "$INCLUDEPATH"
 cp "$SYSROOTPATH/usr/include/jansson_config.h" "$INCLUDEPATH"
 cp "$SYSROOTPATH/usr/include/quiet.h" "$INCLUDEPATH"
-cp -R "$SYSROOTPATH/usr/include/quiet-lwip" "$INCLUDEPATH"
 
 
 #cp "$SYSROOTPATH/usr/include/quiet.h" "$PUBLIC_HEADERS_FOLDER_PATH"
@@ -67,7 +61,6 @@ cp "$SRCPATH/libcorrect/LICENSE" "$LICENSEPATH/libcorrect"
 cp "$SRCPATH/liquid-dsp/LICENSE" "$LICENSEPATH/liquid-dsp"
 cp "$SRCPATH/jansson/LICENSE" "$LICENSEPATH/jansson"
 cp "$SRCPATH/quiet/LICENSE" "$LICENSEPATH/quiet"
-cp "$SRCPATH/quiet-lwip/LICENSE" "$LICENSEPATH/quiet-lwip"
 
 echo
 echo "Build complete. Built libraries are in $LIBPATH"

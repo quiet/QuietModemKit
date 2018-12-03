@@ -2,12 +2,13 @@
 #define QMFrameTransmitter_h
 
 #import <Foundation/Foundation.h>
+#include <AudioToolbox/AudioQueue.h>
+#include <CoreAudio/CoreAudioTypes.h>
 
-#import "QMTransmitterConfig.h"
+#include "QMTransmitterConfig.h"
 
 @interface QMFrameTransmitter : NSObject
 - (id)initWithConfig:(QMTransmitterConfig *)conf;
-- (id)initLoopbackWithConfig:(QMTransmitterConfig *)conf;
 - (void)send:(NSData *)frame;
 - (void)setBlocking:(long)seconds withNano:(long)nano;
 - (void)setNonBlocking;

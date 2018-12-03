@@ -37,11 +37,6 @@
                BlueprintName = "QuietModemKitTests"
                ReferencedContainer = "container:QuietModemKit.xcodeproj">
             </BuildableReference>
-            <SkippedTests>
-               <Test
-                  Identifier = "QuietModemDeviceTests">
-               </Test>
-            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

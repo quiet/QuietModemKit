@@ -37,10 +37,9 @@
   return nil;
 }
 
-- (size_t)receiveTo:(NSMutableData *)data {
-  ssize_t written =
-      quiet_decoder_recv(decoder, [data mutableBytes], [data length]);
-
+- (size_t)receiveTo:(NSMutableData*)data {
+  ssize_t written = quiet_decoder_recv(decoder, [data mutableBytes], [data length]);
+  
   if (written > 0) {
     return written;
   }
