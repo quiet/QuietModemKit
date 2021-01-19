@@ -8,9 +8,9 @@
 
 - (void)testFrameLoopback {
   QMTransmitterConfig *txConf =
-      [[QMTransmitterConfig alloc] initWithKey:@"audible-7k-channel-0"];
+      [[QMTransmitterConfig alloc] initWithKey:@"ultrasonic-fsk"];
   QMReceiverConfig *rxConf =
-      [[QMReceiverConfig alloc] initWithKey:@"audible-7k-channel-0"];
+      [[QMReceiverConfig alloc] initWithKey:@"ultrasonic-fsk"];
 
   QMFrameTransmitter *tx =
       [[QMFrameTransmitter alloc] initLoopbackWithConfig:txConf];

@@ -25,7 +25,7 @@ cmake -DCMAKE_TOOLCHAIN_FILE="$SRCPATH/Build-Phases/apple.toolchain.cmake" -DCMA
 
 mkdir -p "$BUILDPATH/liquid-dsp"
 cd "$BUILDPATH/liquid-dsp"
-cmake -DCMAKE_TOOLCHAIN_FILE="$SRCPATH/Build-Phases/apple.toolchain.cmake" -DCMAKE_BUILD_TYPE=Release "$SRCPATH/liquid-dsp" -DCMAKE_INSTALL_PREFIX="$SYSROOT/usr" -DCMAKE_PREFIX_PATH="$SYSROOT" -DCMAKE_SHARED_LINKER_FLAGS="-L$SYSROOT/usr/lib" -DLIQUID_BUILD_EXAMPLES="off" -DLIQUID_BUILD_SANDBOX="off" && make liquid-static liquid-shared && make install
+cmake -DCMAKE_TOOLCHAIN_FILE="$SRCPATH/Build-Phases/apple.toolchain.cmake" -DCMAKE_BUILD_TYPE=Release "$SRCPATH/liquid-dsp" -DCMAKE_INSTALL_PREFIX="$SYSROOT/usr" -DCMAKE_PREFIX_PATH="$SYSROOT" -DCMAKE_SHARED_LINKER_FLAGS="-L$SYSROOT/usr/lib" -DLIQUID_BUILD_EXAMPLES="off" -DLIQUID_BUILD_SANDBOX="off" -DLIQUID_BUILD_TESTS="off" -DLIQUID_BUILD_BENCHMARKS="off" && make liquid-static liquid-shared VERBOSE=1 && make install
 
 mkdir -p "$BUILDPATH/jansson"
 cd "$BUILDPATH/jansson"

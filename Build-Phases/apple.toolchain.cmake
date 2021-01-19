@@ -149,7 +149,7 @@ set (CMAKE_FIND_ROOT_PATH
     ${CMAKE_APPLE_DEVELOPER_ROOT}/usr/bin
     ${CMAKE_APPLE_SDK_ROOT}
     ${CMAKE_PREFIX_PATH}
-    CACHE string "Apple *OS find search path root"
+    CACHE STRING "Apple *OS find search path root"
 )
 
 # default to searching for frameworks first
