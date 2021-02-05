@@ -24,7 +24,7 @@
   }
 
   producer =
-      [[QuietTransmitter alloc] initWithConfig:conf.opt withSampleRate:44100];
+      [[QuietTransmitter alloc] initWithConfig:conf.opt withSampleRate:48000.f];
   if (!producer) {
     return nil;
   }
@@ -50,7 +50,7 @@
   }
 
   producer =
-      [[QuietTransmitter alloc] initWithConfig:conf.opt withSampleRate:44100];
+      [[QuietTransmitter alloc] initWithConfig:conf.opt withSampleRate:48000.f];
   if (!producer) {
     return nil;
   }

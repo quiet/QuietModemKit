@@ -63,9 +63,9 @@ static const size_t ipv4_str_len = (4 * 3) + 3 + 1;
 - (id)initWithConfig:(QMNetworkInterfaceConfig *)interfaceConfig {
   quiet_lwip_driver_config *conf = malloc(sizeof(quiet_lwip_driver_config));
   conf->encoder_opt = interfaceConfig.txConf.opt;
-  conf->encoder_rate = 44100;
+  conf->encoder_rate = 48000;
   conf->decoder_opt = interfaceConfig.rxConf.opt;
-  conf->decoder_rate = 44100;
+  conf->decoder_rate = 48000;
   memcpy(conf->hardware_addr, [interfaceConfig.hardwareAddress bytes],
          sizeof(conf->hardware_addr));
 

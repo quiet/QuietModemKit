@@ -64,7 +64,7 @@ static void listener_callback(void *user_data, AudioQueueRef queue,
   inUseAudio = self;
 
   AudioStreamBasicDescription format;
-  format.mSampleRate = 44100.f;
+  format.mSampleRate = 48000.f;
   format.mFormatID = kAudioFormatLinearPCM;
   format.mFormatFlags = kAudioFormatFlagIsFloat | kAudioFormatFlagIsPacked;
   format.mBitsPerChannel = sizeof(float) * 8;

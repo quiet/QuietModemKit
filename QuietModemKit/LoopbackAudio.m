@@ -21,7 +21,7 @@
   bool is_closed;
 }
 
-const int loopback_sample_rate = 44100;
+const int loopback_sample_rate = 48000;
 const int loopback_sleep = 23220; // in microseconds
 const int loopback_buffer_length = 1024;
 

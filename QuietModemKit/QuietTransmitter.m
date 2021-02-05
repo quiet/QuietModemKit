@@ -7,7 +7,7 @@
 }
 
 - (id)initWithConfig:(quiet_encoder_options *)conf
-      withSampleRate:(unsigned int)rate {
+      withSampleRate:(float)rate {
   if (!conf) {
     return nil;
   }

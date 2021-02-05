@@ -5,7 +5,7 @@
 
 @interface QuietTransmitter : NSObject <QuietAudioProducer>
 - (id)initWithConfig:(quiet_encoder_options *)conf
-      withSampleRate:(unsigned int)rate;
+      withSampleRate:(float)rate;
 - (void)send:(NSData *)frame;
 - (void)setBlocking:(long)seconds withNano:(long)nano;
 - (void)setNonBlocking;

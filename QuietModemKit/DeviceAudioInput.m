@@ -61,10 +61,17 @@ static void listener_callback(void *user_data, AudioQueueRef queue,
       setCategory:AVAudioSessionCategoryPlayAndRecord
       withOptions:(AVAudioSessionCategoryOptionDefaultToSpeaker |
                    AVAudioSessionCategoryOptionMixWithOthers)
-            error:&err];
+      error:&err];
 
   if (err != nil) {
     return nil;
+  }
+
+  AVAudioSessionPortDescription *port = [AVAudioSession sharedInstance].availableInputs[0];
+  for (AVAudioSessionDataSourceDescription *source in port.dataSources) {
+    if ([source.dataSourceName isEqualToString:@"Back"]) {
+      [port setPreferredDataSource:source error:nil];
+    }
   }
 
   self = [super init];
@@ -79,7 +86,7 @@ static void listener_callback(void *user_data, AudioQueueRef queue,
   inUseAudio = self;
 
   AudioStreamBasicDescription format;
-  format.mSampleRate = 44100.f;
+  format.mSampleRate = 48000.f;
   format.mFormatID = kAudioFormatLinearPCM;
   format.mFormatFlags = kLinearPCMFormatFlagIsFloat | kAudioFormatFlagIsPacked;
   format.mBitsPerChannel = sizeof(float) * 8;

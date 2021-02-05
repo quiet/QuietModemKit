@@ -27,7 +27,7 @@
   }
 
   consumer =
-      [[QuietReceiver alloc] initWithConfig:conf.opt withSampleRate:44100];
+      [[QuietReceiver alloc] initWithConfig:conf.opt withSampleRate:48000.f];
   if (!consumer) {
     return nil;
   }
@@ -55,7 +55,7 @@
   }
 
   consumer =
-      [[QuietReceiver alloc] initWithConfig:conf.opt withSampleRate:44100];
+      [[QuietReceiver alloc] initWithConfig:conf.opt withSampleRate:48000.f];
   if (!consumer) {
     return nil;
   }
